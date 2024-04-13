@@ -505,7 +505,15 @@ p {
     position: fixed;
     top: 0;
     background-color: rgba(46, 47, 66, 0.4);
-    
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.backdrop.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
 }
 
 .modal {
@@ -542,7 +550,7 @@ p {
     border: none;
 
 }
-l
+
 .modal-title {
     font-weight: 500;
     font-size: 16px;
@@ -573,7 +581,6 @@ l
 .modal-feild-icon {
     position: absolute;
     padding: 3px 0px;
-    /* width: 18px; */
     margin-left: 16px;
     left: 16;
     fill: #2e2f42;
@@ -595,7 +602,6 @@ l
 
 .modal-input-textbox:focus {
     border: 1px solid #4d5ae5;
-    cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
@@ -638,7 +644,9 @@ l
 }
 
 .footer-btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
     border: none;
     min-width: 169px;
@@ -661,35 +669,6 @@ l
     background-color: #404bbf;
 }
 
-
-/* .check-icon {
-    cursor: pointer;
-    border-radius: 2px;
-        border: 1px solid rgba(46, 47, 66, 0.4);
-            background-color: transparent;
-            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            fill: none;
-} */
-
-
-
-/* !!! */
-
-/* .modal-text {
-    width: 100%;
-    height: 137px;
-    border: 1.5px solid rgba(17, 17, 17, 0.15);
-    border-radius: 13px;
-    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.03);
-    background-color: transparent;
-    font-size: 18px;
-    color: purple;
-    padding: 22px 24px;
-    outline: transparent;
-    transition: border-color 300ms linear;
-    resize: none;
-}
-
 .check-text {
     font-size: 14px;
     letter-spacing: -0.02em;
@@ -697,23 +676,28 @@ l
     display: flex;
     align-items: baseline;
     gap: 8px;
-    
     position: relative;
+    padding-top: 16px;
+    padding-bottom: 24px;
+    
 }
 
 .check-text span {
-    width: 20px;
-    height: 20px;
-    border-radius: 6px;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
     border: 1px solid rgba(17, 17, 17, 0.14);
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
     fill: transparent;
+    cursor: pointer;
 }
 
 .modal-check:checked+.check-text span {
-    background-color: #404bbf;;
-    border: none;
+    background-color: #404bbf;
+    border: 1px solid #404bbf;
     fill: #eceded;
-} */
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
