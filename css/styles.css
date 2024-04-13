@@ -279,7 +279,6 @@ p {
 .person-social-list {
     display: flex;
     gap: 24px;
-    display: flex;
     justify-content: center;
 }
 
@@ -709,25 +708,26 @@ p {
     margin-bottom: 16px;;
 }
 
+.priv-polcy {
+    line-height: 1.33333;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #4d5ae5;
+}
 
-/* --------------------------SUBSRIBE--------------------- */
-
-
+/* Subscribe */
 .subscribe {
     margin-left: 80px;
 }
 
-
-
 .subscribe-footer-form {
     display: flex;
     gap: 24px;
-        align-items: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-input {
-
     border: 1px solid #fff;
     border-radius: 4px;
     width: 264px;
@@ -764,19 +764,23 @@ p {
     border: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
-    }
+}
         
 .footer-btn:hover,
 .footer-btn:focus {
-        background-color: #404bbf;
-    }
+    background-color: #404bbf;
+}
 
 
-
-.subscribe-btn {
+.footer-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
 
-    }
+}       
+
+.telegram-icon {
+    fill: #ffff;
+    margin-left: 16px;
+
+}
