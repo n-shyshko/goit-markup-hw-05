@@ -489,21 +489,21 @@
             </li>
           </ul>
         </div>
+        <!-- Subscribe footer -->
         <div class="subscribe">
           <p class="subscribe-heading">Subscribe</p>
-          <!-- Subscribe footer -->
           <form class="subscribe-footer-form">
-            <label>
+            <label class="email-input">
               <input
                 type="email"
-                placeholder="Email"
+                placeholder="E-mail"
                 name="footer-email"
                 class="footer-input"
               />
             </label>
             <button type="submit" class="footer-btn">
               Subscribe
-              <svg class="telegram-icon" width="24px" height="24px">
+              <svg class="telegram-icon" width="24" height="24">
                 <use href="./images/icons.svg#icon-telegrambtnicon"></use>
               </svg>
             </button>
@@ -512,10 +512,10 @@
       </div>
     </footer>
     <!-- Modal -->
-    <div class="backdrop">
+    <div class="backdrop is-open">
       <div class="modal">
         <button type="button" class="modal-close-btn">
-          <svg class="moddal-close-icon" width="8px" height="8px">
+          <svg class="modal-close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
@@ -564,13 +564,14 @@
             </div>
           </div>
           <div class="modal-input-wrap">
-            <label for="text-box" class="modal-label">Comment</label>
+            <label for="user-comment" class="modal-label">Comment</label>
             <textarea
               class="modal-input-textbox"
               placeholder="Text input"
-              name="user-email"
-              id="text-box"
+              name="user-commen"
+              id="user-comment"
             ></textarea>
+
             <input
               type="checkbox"
               name="policy"
